@@ -1,12 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 body{
+    width: 100%
+}
+
+.main{
     width: 100%;
 }
 
-img{
-    display: inline-block;
+#first{
+    border: 2px solid red;
+    background-color: black;
 }
 
-h3{
-    display: inline-block;
+#firstTop{
+    width: 70%;
+    margin: 5px auto;
+    
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-gap: 0.5em;
+    
+}
 
+#logoDiv{
+    
+}
+
+#logo{
+    width: 25%;
+    height: 25%;
+    padding: 2px;
+    margin: 3% 5%;
+    
+}
+
+#navDiv{
+    
+}
+
+#navList{
+    list-style: none;
+    margin: 0 0 0 50%;
+}
+
+#navList li{
+    float: left;
+    margin: 10% 0% 0% 5%;
+}
+
+#navList li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-family: 'Orbitron', sans-serif;  
+}
+
+#navList li a:hover{
+  border-bottom: 2px solid white; 
+}
+
+
+
+#firstDown{
+    width: 70%;
+    margin: 5px auto;
+    /*border: 2px solid red;*/
 }
