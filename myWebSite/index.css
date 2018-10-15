@@ -12,45 +12,52 @@ body{
     width: 100%;
 }
 
+#container {
+
+}
+
 #first{
-    border: 2px solid red;
-    background-color: black;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5) ), url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 935px;
+    text-align: center;
 }
 
 #firstTop{
-    width: 70%;
+    width: 75%;
     margin: 5px auto;
-    
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    grid-gap: 0.5em;
-    
+    grid-template-columns: 25% 75%;
+    grid-gap: 0.5em;   
 }
 
 #logoDiv{
-    
+
 }
 
 #logo{
-    width: 25%;
-    height: 25%;
+    width: 100px ;
+    height: 80px;
     padding: 2px;
-    margin: 3% 5%;
+    margin: 5% 0% 5% 5%;
     
 }
 
 #navDiv{
-    
+    text-align: center;  
 }
 
 #navList{
     list-style: none;
-    margin: 0 0 0 50%;
+   width: 100%;
+   text-align: center;
 }
 
 #navList li{
-    float: left;
-    margin: 10% 0% 0% 5%;
+    float: right;
+    margin: 50px 20px 0px 0px;
+     text-align: center;
 }
 
 #navList li a{
@@ -61,13 +68,274 @@ body{
 }
 
 #navList li a:hover{
-  border-bottom: 2px solid white; 
+  font-weight: bolder;
+
 }
-
-
 
 #firstDown{
     width: 70%;
     margin: 5px auto;
-    /*border: 2px solid red;*/
+    position: relative;
+    top: 250px;
+}
+
+.texts {
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    text-align: center;
+}
+
+#myNameText2{
+    font-family: 'Righteous', cursive;
+  
+}
+
+#myNameText1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 130%;
+    margin-bottom: 10px;
+}
+
+#firstDownButtom{
+    color:white;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 3%;
+}   
+
+#viewImgsButton{
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 20px;
+    width: 200px;
+    margin:auto;
+}
+
+#viewImgsButton:hover{
+    cursor: pointer;
+    background-color: white;
+    color: gray;
+    transition: 0.3s background-color linear, 0.3s color linear;
+}
+
+#second{
+    padding: 50px 0%;
+    background-color:  #edeeef;;
+}
+
+.texts2 {
+    padding: 10px;
+    margin: 10px 0%;
+    color: black;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    margin: 5px auto;
+}
+
+#secondTitle{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#myFocusPara{
+    line-height: 1.6;
+    font-size: 150%;
+    font-family: 'Abel', sans-serif;
+    color: #484848;
+}
+
+#third{
+    padding: 2% 0%;
+
+}
+
+#thirdTitle{
+    margin: 5px auto;   
+    margin-bottom: 3%;
+}
+
+
+
+#thirdSkills{
+    margin: 5px auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+
+.skillTitle{
+    font-family: 'Orbitron', sans-serif; 
+    padding: 5px;
+    margin: 0.5% 0%;
+  
+}
+
+.skillPara{
+    text-align: center;
+    padding: 10px;
+    margin: 0.5% 0%;
+    line-height: 1.4;
+}
+
+.skills img{
+    padding: 5px;
+    margin: 1% 0% 1% 2%;
+}
+
+#thirdButton{
+    padding: 1% 0%;
+    margin: 3% 1%;
+}
+
+#SkillButton{
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 20px;
+    width: 200px;
+    margin:auto;
+    border: 2px solid black;
+}
+
+#SkillButton:hover{
+    cursor: pointer;
+    background-color: #272727;
+    color: white;
+    transition: 0.3s background-color linear, 0.3s color linear;
+}
+
+#fourth{
+    background-color: #edeeef;
+}
+
+#fourthTitle{
+    padding: 2% 0%;
+}
+
+#albumsDiv{
+    margin: 5px 5%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em
+
+
+}
+
+.albums{
+    
+    height: 455px;
+    background-repeat: no-repeat;
+}
+
+.white{
+    color: white;
+  
+}
+
+
+#citiesAlbum{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/cities.jpg);
+
+    
+}
+
+#natureAlbum{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/nature.jpg);
+ 
+}
+
+#randomAlbum{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/random.jpg);
+
+}
+
+#randomContent, #natureContent, #cityContent{
+    font-family: 'Cormorant Garamond', serif;
+    margin: 20% 0% 0% 0%;
+    display: none;
+}
+
+#citiesAlbum:hover{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) ), url(images/cities.jpg);
+}
+
+#citiesAlbum:hover #cityContent{
+    display: block;
+    -webkit-animation: slide-down .8s ease-out;
+    -moz-animation: slide-down .8s ease-out;
+}
+
+#natureAlbum:hover{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) ), url(images/nature.jpg);
+}
+
+#natureAlbum:hover #natureContent{
+    display: block;
+    -webkit-animation: slide-down .8s ease-out;
+    -moz-animation: slide-down .8s ease-out;
+}
+
+#randomAlbum:hover{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) ), url(images/random.jpg);
+}
+
+#randomAlbum:hover #randomContent{
+    display: block;
+    -webkit-animation: slide-down .8s ease-out;
+    -moz-animation: slide-down .8s ease-out;
+    
+}
+
+
+@-webkit-keyframes slide-down {
+    0% { opacity: 0; -webkit-transform: translateY(-100%); }   
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@-moz-keyframes slide-down {
+    0% { opacity: 0; -moz-transform: translateY(-100%); }   
+  100% { opacity: 1; -moz-transform: translateY(0); }
+}
+
+.albumButton{
+    padding: 10px;
+    background-color: white;
+    color: gray;
+    margin: 3% auto;
+    width: 205px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.albumButton:hover{
+    cursor: pointer;
+    color: black;
+
+}
+
+.saifTabaja{
+    padding: 2% 1%;
+    
+}
+
+#fourthButton{
+    padding: 1% 0%;
+    margin: 3% 1%;
+}
+
+#instaButton{
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 20px;
+    width: 200px;
+    margin:auto auto 2% auto;
+    border: 2px solid black;
+}
+
+#instaButton:hover{
+    cursor: pointer;
+    background-color: #272727;
+    color: white;
+    transition: 0.3s background-color linear, 0.3s color linear;
 }
