@@ -5,7 +5,8 @@
 }
 
 body{
-    width: 100%
+    width: 100%;
+    height: 100%;
 }
 
 .main{
@@ -20,9 +21,12 @@ body{
     background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5) ), url(images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 935px;
     text-align: center;
+    height: 935px;
+   
 }
+
+
 
 #firstTop{
     width: 75%;
@@ -75,41 +79,46 @@ body{
 #firstDown{
     width: 70%;
     margin: 5px auto;
-    position: relative;
-    top: 250px;
+        position: relative;
+        top: 20%;
 }
 
 .texts {
-    padding: 5px;
+    padding: 1% 0%;
     margin: 5px;
     color: white;
     text-align: center;
 }
 
 #myNameText2{
-    font-family: 'Righteous', cursive;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 30%;
   
 }
 
 #myNameText1{
     font-family: 'Cormorant Garamond', serif;
     font-size: 130%;
-    margin-bottom: 10px;
+    
 }
 
 #firstDownButtom{
     color:white;
     font-family: 'Orbitron', sans-serif;
-    margin-top: 3%;
+    padding: 1% 0%;
+    margin: 3% 1%;
 }   
 
 #viewImgsButton{
+    font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     border: 2px solid white;
     padding: 20px;
     width: 200px;
     margin:auto;
 }
+
+
 
 #viewImgsButton:hover{
     cursor: pointer;
@@ -144,7 +153,7 @@ body{
 }
 
 #third{
-    padding: 2% 0%;
+    padding: 50px 0%;
 
 }
 
@@ -206,6 +215,7 @@ body{
 }
 
 #fourth{
+     padding: 50px 0%;
     background-color: #edeeef;
 }
 
@@ -219,14 +229,13 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2em
-
-
 }
 
 .albums{
-    
     height: 455px;
     background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
 }
 
 .white{
@@ -237,6 +246,7 @@ body{
 
 #citiesAlbum{
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/cities.jpg);
+    
 
     
 }
@@ -253,7 +263,8 @@ body{
 
 #randomContent, #natureContent, #cityContent{
     font-family: 'Cormorant Garamond', serif;
-    margin: 20% 0% 0% 0%;
+    position: relative;
+    top: 25%;
     display: none;
 }
 
@@ -323,13 +334,94 @@ body{
     margin: 3% 1%;
 }
 
+#albumButton{
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 20px;
+    width: 210px;
+    margin:auto auto 2% auto;
+    border: 2px solid black;
+}
+
+#albumButton:hover{
+    cursor: pointer;
+    background-color: #272727;
+    color: white;
+    transition: 0.3s background-color linear, 0.3s color linear;
+}
+
+#fifth{
+   
+}
+
+#fifthTitle{
+    padding: 2% 0%;
+    margin: 1% 0%;
+}
+
+#imageContainer{
+    margin: 5px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+#imageContainer a{
+    text-decoration: none;
+}
+
+.fifthImages{
+    width: 100%;
+    height: 100%; 
+    transition: .5s ease;
+   
+}
+
+
+.imgWrap{
+    position: relative;
+}
+
+
+.middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bolder;
+}
+
+.imgWrap:hover .fifthImages {
+    opacity: 0.3;
+  }
+
+.imgWrap:hover .middle {
+    opacity: 1;
+  }
+
+
+#fifthButton{
+    margin: 2% 0%;
+}
+
+#fifthButton a{
+    text-decoration: none;
+   
+}
+
 #instaButton{
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     border: 2px solid white;
     padding: 20px;
-    width: 200px;
-    margin:auto auto 2% auto;
+    width: 300px;
+    margin: 3% auto;
     border: 2px solid black;
 }
 
@@ -338,4 +430,104 @@ body{
     background-color: #272727;
     color: white;
     transition: 0.3s background-color linear, 0.3s color linear;
+}
+
+.decorNone{
+    text-decoration: none;
+}
+
+#sixth{
+    background-color: #272727;
+    height: 400px;
+}
+
+#sixthTitle{
+    font-family: 'Cormorant Garamond', serif;
+    padding: 3% 0% 1% 0%; 
+}
+
+#navDivBottom{
+    margin: 1% 0%;
+    width: 100%;
+    height: 20%;
+   
+}
+
+#navListBottom{
+    list-style-type: none;
+    width: 50%;
+    margin: 0% 35% 0% 12%;
+  
+}
+
+#navListBottom li {
+    float: right;
+    margin: 1% 2%;
+    padding: 5px;
+}
+
+#navListBottom li a{
+    color:white;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#navListBottom li a:hover{
+    font-weight: bolder;
+}
+
+
+#socialItems{
+    position: relative;
+    left:   42.5%;
+    padding: 0;
+    
+   
+}
+
+#rightsPara{
+    
+}
+
+#socialItems li{
+    list-style: none;
+    float: left;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 50%;
+    color: #262626;
+    text-align: center;
+    line-height: 50px;
+    z-index: 1;
+    font-size: 30px;
+    transition: .5s ease-in-out;
+    position: relative;
+
+
+}
+
+#socialItems li:before{
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    z-index: -1;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: .3s ease-in-out;
+}
+
+#socialItems li:hover:before{
+    left: 0;
+    transform: scale(1);
+}
+
+#socialItems  li:nth-child(1):before{
+    background: #ccc;
 }
