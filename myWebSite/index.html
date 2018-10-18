@@ -2,17 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
-
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
     <title>www.saiftabaja.com</title>
 </head>
 
@@ -35,16 +34,42 @@
             </div>
 
             <div id="firstDown">
-                <div class="firstDownDivs" class="firstDownText">
-                    <h4 class="texts" id="myNameText1">My name is Seif Tabaja and Software Development is my ultimate
-                        career goal</h4>
-                    <h1 class="texts" id="myNameText2">IN MY WEBSITE, YOU`LL FIND SOME INFO ABOUT <br>ME, MY RESUME AND
-                        SOME SHOTS OF MINE </h1>
+                <div class="hide" id="firstDownContact">
+                    <h1 id="contactMessage">Don't hesitate to contact me</h1>
+                    <div id="contactForm">
+                        <div class="contactDivs" id="contactTop">
+                            <input class="contactInputs" id="contactName" type="text" placeholder="Name"><br>
+                            <input class="contactInputs" id="contactPhone" type="text" placeholder="Phone Number: +code ..."><br>
+                            <input class="contactInputs" id="contactEmail" type="text" placeholder="Email: example@example.com"><br>
+                        </div>
+                        <div class="contactDivs" id="contactBot">
+                            <textarea class="textarea" name="" rows="10" placeholder="Enter Your Message"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="contactButtons">
+                        <h3 class="btn" id="sendBtn">SEND</h3>
+                        <h3 class="btn" id="clearBtn">RESET</h3>
+                    </div>
+
                 </div>
 
-                <div class="firstDownDivs" id="firstDownButtom">
-                    <h3 class="texts" id="viewImgsButton">VIEW IMAGES</h3>
+
+                <div id="temp">
+                    <div class="firstDownDivs" class="firstDownText">
+                        <h4 class="texts" id="myNameText1">My name is Seif Tabaja and Software Development is my
+                            ultimate
+                            career goal</h4>
+                        <h1 class="texts" id="myNameText2">This website was made just for fun and to learn new things
+                            <br>
+                            in responsive design. </h1>
+                    </div>
                 </div>
+                <div class="firstDownDivs" id="firstDownButtom">
+                    <h3 class="texts btn" id="viewImgsButton">CONTACT ME</h3>
+
+                </div>
+
             </div>
 
 
@@ -78,9 +103,9 @@
                             Coding
                         </h4>
                         <p class="skillPara">
-                            I have learned the coding at my university during my <br>
-                            bachlol`s degree. However, it was very basic. Thefore, <br>
-                            I have started to learn it by myself and later during <br>
+                            I have learned the coding at my university during my
+                            bachlol`s degree. However, it was very basic. Thefore,
+                            I have started to learn it by myself and later during
                             my master`s degree.
                         </p>
                     </div>
@@ -91,9 +116,9 @@
                             Information Technology
                         </h4>
                         <p class="skillPara">
-                            Working in the IT domain was my first job as I have worked <br>
-                            as an IT infrastructure engineer at a mid size company in <br>
-                            Kuwait for more than two years before I decided to quit this <br>
+                            Working in the IT domain was my first job as I have worked
+                            as an IT infrastructure engineer at a mid size company in
+                            Kuwait for more than two years before I decided to quit this
                             job and join the master`s program at Chalmers univeristy in sweden.
                         </p>
 
@@ -105,9 +130,9 @@
                             photography
                         </h4>
                         <p class="skillPara">
-                            Beside Chess and football, photography is my favorait hobby. <br>
-                            I like to take photos of different things, such as patterns, cities, <br>
-                            buildings, and many others. However, my favorait is taking photos for <br>
+                            Beside Chess and football, photography is my favorait hobby.
+                            I like to take photos of different things, such as patterns, cities,
+                            buildings, and many others. However, my favorait is taking photos for
                             the nature and old things.
                         </p>
                     </div>
@@ -181,7 +206,7 @@
 
             <div id="fourthButton">
                 <a class="decorNone" href="#" target="_blank">
-                    <h3 class="texts2" id="albumButton">MORE ALBUMS</h3>
+                    <h3 class="texts2 " id="albumButton">MORE ALBUMS</h3>
                 </a>
 
             </div>
@@ -194,109 +219,109 @@
             </h1>
             <div id="imageContainer">
 
-                    <div class="imgWrap">
-                        <a href="images/shots/1.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/1.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3>South of Lebanon</h3>
-                        </div>
+                <div class="imgWrap">
+                    <a href="images/shots/1.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/1.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3>South of Lebanon</h3>
                     </div>
-    
-    
-                    <div class="imgWrap">
-                        <a href="images/shots/2.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/2.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3 class="text">South of Lebanon</h3>
-                        </div>
-                    </div>
-    
-                    <div class="imgWrap">
-                        <a href="images/shots/3.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/3.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3 class="text">South of Lebanon</h3>
-                        </div>
-                    </div>
-    
-                    <div class="imgWrap">
-                        <a href="images/shots/4.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/4.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3 class="text">Gothenburg Sweden</h3>
-                        </div>
-                    </div>
-    
-                    <div class="imgWrap">
-                        <a href="images/shots/5.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/5.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3 class="text">East of Lebanon</h3>
-                        </div>
-                    </div>
-    
-                    <div class="imgWrap">
-                        <a href="images/shots/9.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/9.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3 class="text">Halver Germany</h3>
-                        </div>
-                    </div>
-    
-                    <div class="imgWrap">
-                        <a href="images/shots/11.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/11.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3 class="text">Amsterdam</h3>
-                        </div>
-                    </div>
-    
-                    <div class="imgWrap">
-                        <a href="images/shots/12.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/12.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3 class="text">Stockholm Sweden</h3>
-                        </div>
-                    </div>
-    
-    
-                    <div class="imgWrap">
-                        <a href="images/shots/13.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/13.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3 class="text">Helsinborg Sweden</h3>
-                        </div>
-                    </div>
-    
-                    <div class="imgWrap">
-                        <a href="images/shots/14.jpg" target="_blank">
-                            <img class="fifthImages" src="images/shots/14.jpg" alt="">
-                        </a>
-    
-                        <div class="middle">
-                            <h3 class="text">Gothenburg Sweden</h3>
-                        </div>
-                    </div>
-    
                 </div>
+
+
+                <div class="imgWrap">
+                    <a href="images/shots/2.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/2.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3 class="text">South of Lebanon</h3>
+                    </div>
+                </div>
+
+                <div class="imgWrap">
+                    <a href="images/shots/3.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/3.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3 class="text">South of Lebanon</h3>
+                    </div>
+                </div>
+
+                <div class="imgWrap">
+                    <a href="images/shots/4.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/4.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3 class="text">Gothenburg Sweden</h3>
+                    </div>
+                </div>
+
+                <div class="imgWrap">
+                    <a href="images/shots/5.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/5.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3 class="text">East of Lebanon</h3>
+                    </div>
+                </div>
+
+                <div class="imgWrap">
+                    <a href="images/shots/9.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/9.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3 class="text">Halver Germany</h3>
+                    </div>
+                </div>
+
+                <div class="imgWrap">
+                    <a href="images/shots/11.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/11.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3 class="text">Amsterdam Netherlands</h3>
+                    </div>
+                </div>
+
+                <div class="imgWrap">
+                    <a href="images/shots/12.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/12.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3 class="text">Stockholm Sweden</h3>
+                    </div>
+                </div>
+
+
+                <div class="imgWrap">
+                    <a href="images/shots/13.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/13.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3 class="text">Helsinborg Sweden</h3>
+                    </div>
+                </div>
+
+                <div class="imgWrap">
+                    <a href="images/shots/14.jpg" target="_blank">
+                        <img class="fifthImages" src="images/shots/14.jpg" alt="">
+                    </a>
+
+                    <div class="middle">
+                        <h3 class="text">Gothenburg Sweden</h3>
+                    </div>
+                </div>
+
+            </div>
             <div id="fifthButton">
                 <a class="decorNone" href="https://www.instagram.com/saif_tabaja/" target="_blank">
                     <h3 class="texts2" id="instaButton">MORE INSTAGRAM &rarr;</h3>
@@ -314,25 +339,25 @@
                     <li><a href="resume.html">RESUME</a></li>
                     <li><a href="index.html">HOME</a></li>
                 </ul>
+
             </div>
 
-            <p class="texts white" id="rightsPara">&reg; 2018 Seif Tabaja, All rights reserved. </p>
-            <ul id="socialItems">
-                <a href="https://www.facebook.com/saif.tabaja" target="_blank">
-                    <li><i class="fab fa-facebook-square"></i></li>
-                </a>
-                <a href="https://github.com/SamTabaja" target="_blank">
-                    <li><i class="fab fa-github-square"></i></li>
-                </a>
-                <a href="https://www.instagram.com/saif_tabaja/" target="_blank">
-                    <li><i class="fab fa-instagram"></i></li>
-                </a>
-                <a href="https://www.linkedin.com/in/seif-tabaja-157314131/" target="_blank">
-                    <li><i class="fab fa-linkedin"></i></li>
-                </a>
-            </ul>
-
-
+            <div id="socialMedia">
+                <ul id="socialItems">
+                    <a href="https://www.facebook.com/saif.tabaja" target="_blank">
+                        <li><i class="fab fa-facebook-square"></i></li>
+                    </a>
+                    <a href="https://github.com/SamTabaja" target="_blank">
+                        <li><i class="fab fa-github-square"></i></li>
+                    </a>
+                    <a href="https://www.instagram.com/saif_tabaja/" target="_blank">
+                        <li><i class="fab fa-instagram"></i></li>
+                    </a>
+                    <a href="https://www.linkedin.com/in/seif-tabaja-157314131/" target="_blank">
+                        <li><i class="fab fa-linkedin"></i></li>
+                    </a>
+                </ul>
+            </div>
 
         </div>
 

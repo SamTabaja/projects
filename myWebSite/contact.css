@@ -1,0 +1,171 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+   
+
+}
+
+.main{
+    width: 100%;
+
+}
+
+#first{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5) ), url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-bottom:5%;
+    
+   
+}
+
+
+
+#firstTop{
+    width: 75%;
+    margin: 5px auto;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-gap: 0.5em;  
+ 
+}
+
+#logo{
+    width: 100px ;
+    height: 80px;
+    padding: 2px;
+    margin: 5% 0% 5% 5%;
+    
+}
+
+#navDiv{
+    text-align: center;  
+}
+
+#navList{
+    list-style: none;
+   width: 100%;
+   text-align: center;
+}
+
+#navList li{
+    float: right;
+    margin: 50px 20px 0px 0px;
+     text-align: center;
+}
+
+#navList li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-family: 'Orbitron', sans-serif;  
+    font-size: 1vw;
+}
+
+#navList li a:hover{
+  font-weight: bolder;
+
+}
+
+#viewImgsButton:hover{
+    cursor: pointer;
+    background-color: white;
+    color: gray;
+    transition: 0.3s background-color linear, 0.3s color linear;
+}
+
+#firstDown{
+    width: 50%;
+    margin: 5% auto;
+
+}
+
+#contactMessage{
+    font-family: 'Oswald', sans-serif;
+
+    font-weight: bolder;
+    padding: 2%;
+    margin: .5% auto;
+    color: white;
+    font-size: 1.75vw;
+  
+
+}
+
+#contactForm{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#contactTop{
+    margin: 1% auto;
+}
+
+#contactBot{
+    margin: 1% auto;
+    width: 100%;
+}
+
+.contactInputs{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bolder;
+    padding: 2%;
+    margin: .5% auto;
+    width: 40%;
+    text-align: center;
+    outline: none;
+ 
+}
+
+.contactInputs:focus{
+    border: 3px solid black; 
+}
+
+.contactDivs{
+    
+}
+
+.textarea{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bolder;
+    padding: 2%;
+    width: 40%;
+    flex-direction: column;
+    resize: vertical;
+    resize: none;
+    outline: none;
+   
+}
+
+.textarea:focus{
+    border: 3px solid black; 
+}
+
+#contactButtons{
+  
+}
+
+.btn{
+    color: white;
+    display: inline-block;
+    border: 2px solid white;
+    padding: 10px;
+    margin: .25% .75%;
+    width: 19%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1vw;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: gray;
+    transition: 0.3s background-color linear, 0.3s color linear;
+
+}
