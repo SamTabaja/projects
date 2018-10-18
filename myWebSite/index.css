@@ -116,10 +116,6 @@ body{
     grid-gap: 0.5em;   
 }
 
-#logoDiv{
-
-}
-
 #logo{
     width: 100px ;
     height: 80px;
@@ -209,7 +205,13 @@ body{
 
 #second{
     padding: 50px 0%;
-    background-color:  #edeeef;;
+    background-color:  #edeeef;
+    
+}
+
+#myFocus{
+    width: 80%;
+    margin: auto;
 }
 
 .texts2 {
@@ -591,26 +593,321 @@ body{
 }
 
 #socialItems{
-  
+
+  position: relative;
+  right:2% ;
+}
+
+.si{
+    width: 30px;
+    height:30px;
 }
 
 #socialItems li{
     list-style: none;
     float: right;
-    margin: 1% 2% 1% 0;
-    padding: 10px;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    background-color: #fff;
+    margin: 1% 1% 1% 0;
+    padding: 5px;
     border-radius: 25%;
-    color: #262626;
-    text-align: center;
-    font-size: 20px;
 }
 
 
-#socialItems li:hover{
-   border-radius: 50%;
-   background: lightgray;
-}
+
+@media only screen and (max-width: 600px) {
+
+    #logo{
+        width: 50px ;
+        height: 40px;
+        margin: 50% 0% 5% 5%;
+    }
+    
+    #navList li{ 
+        margin: 50px 5px 0px 0px;
+    }
+    
+    #navList li a{
+        font-size:2vw;
+    }
+
+    #firstDown{
+        width: 70%;
+        margin: 5px auto;
+        padding-top: 2%;
+    }
+    
+    #myNameText2{
+        font-size: 1em;     
+    }
+    
+    #myNameText1{
+        font-size: .75em;   
+    }
+    
+    #firstDownButtom{
+        margin: 3% 1%;
+    }   
+    
+    #viewImgsButton{
+        margin: 5% 0 0 0%;
+        width:100px;
+        font-size: .5em;
+    }
+    
+    #secondTitle{
+        font-size: 1em;
+    }
+    
+    #second{
+        padding: 5% 0;
+    }
+    
+    #myFocus{
+       width: 80%;
+       margin: 0px auto;
+       padding: 0px;
+    }
+    
+    #myFocusPara{
+        line-height: 1.6;
+        font-size: .75em;
+    }
+
+    #third{
+        padding: 5% 0;
+        margin: 0px;
+    }
+   
+    #thirdTitle{
+        font-size: 1em;
+    }
+    
+    
+    
+    #thirdSkills{
+        width: 80%;
+        margin: 5px auto;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;     
+    }
+    
+    .skills{
+        margin:2% 0;
+    }
+    
+    .skillTitle{
+        font-size: .75em;
+    }
+    
+    .skillPara{
+        line-height: 1.4;
+        font-size: .75em;
+    }
+    
+    .skills img{
+        width: 75px;
+        height: 75px;
+    }
+    
+    #thirdButton{
+        padding: 1% 0%;
+        margin: 3% 1%;
+    }
+    
+    #SkillButton{
+        padding: 2vw;
+        width:100px;
+        font-size: .5em;
+    }
+
+    #fourth{
+       background-color: #edeeef;
+       padding: 5% 0;
+   }
+   
+   #fourthTitle{
+       font-size: 1em;
+       margin: 5% 0 5% 0;
+   }
+   
+   #albumsDiv{
+       width: 80%;
+       margin: 5px auto;
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-gap: .75em
+   }
+   
+   .albums{
+       height: 25vh;
+       width: 100%;
+   }
+   
+   #randomContent, #natureContent, #cityContent{
+       font-family: 'Cormorant Garamond', serif;
+       position: relative;
+       top: 50%;
+       display: none;
+       background-size: 100% 100%;
+   }
+   
+   .albumButton{
+       padding: 1vw;
+       width: 25%;
+       font-size: 1.5vw;
+   }
+   
+   .saifTabaja{
+       font-size: 1.5vw;  
+   }
+   
+   .albumType{
+       padding: 1% 0;
+       font-size: 2.5vw;
+   }
+   
+   #albumButton{
+       margin: 5% auto 1% auto;
+       width: 100px;
+       font-size: 2vw;      
+   }
+   
+
+   #fifthTitle{
+       margin: 5% 0 5% 0;
+        font-size: 1em;
+   }
+   
+   #imageContainer{
+       margin: 5px 10%;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-gap: 1em;
+   }
+   
+   
+   .middle{
+       font-size: 2vw;
+   }
+ 
+   #fifthButton{
+       margin: 5% 0 5% 0;
+   }
+   
+   #fifthButton a{
+       text-decoration: none;
+      
+   }
+   
+   #instaButton{
+       font-family: 'Orbitron', sans-serif;
+       font-weight: bold;
+       border: 2px solid white;
+       padding: 1vw;
+       width:150px;
+       font-size: 2vw;
+       border: 2px solid black;
+   }
+ 
+   
+   #sixth{
+    padding: 5% 0;
+    }
+
+    #sixthTitle{
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1em;
+    }
+
+    #navDivBottom{
+        margin: 1% 15%;
+        width: 50%;
+        height: 70px;
+
+    }
+
+    #navListBottom{
+      position: relative;
+      left: 25px;
+    }
+
+    #navListBottom li {
+        float: right;
+        margin: 5% 2%;
+    }
+
+    #navListBottom li a{
+        font-size: .5em;
+        padding: 20%;   
+    }
+
+    #rightsPara{
+        
+    }
+
+    #socialMedia{
+        margin: 1% 7%;
+        width: 70%;
+        height: 30px;
+    }
+
+    #rights{
+        width: 80%;
+        margin: 2% 34%;
+        
+    }
+
+    #rightsPara{
+        margin: 2% auto;
+        font-size: .5em;
+    }
+
+    #socialItems{
+        position: relative;
+        right:10% ;
+    }
+
+    .si{
+        width: 20px;
+        height:20px;
+    }
+
+    #contactMessage{
+        font-weight: normal;
+        margin: 5% auto;
+        font-size: 1em;
+    }
+    
+    #contactForm{
+        width: 100%;
+    }
+    
+    .contactInputs{
+        font-weight: normal;
+        padding: 2%;
+        margin: 1% auto;
+        width: 65%;
+        font-size: .5em;
+        text-align: left;    
+    }
+      
+    .textarea{
+ 
+        font-weight: normal;
+        padding: 2%;
+        width: 65%;
+        margin-top: 1.5%;
+        font-size: .5em;
+       
+    }
+    .btn{
+        padding: 10px;
+        margin: .25% .75%;
+        width: 30%;
+        font-size: .75em;
+    }
+
+    #lastImg{
+        display: none;
+    }
+} 
