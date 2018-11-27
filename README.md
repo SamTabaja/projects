@@ -1,7 +1,7 @@
 # projects
 This repo contains some for FUN work
 ## myWebSite folder
-This website was made just for fun and to test some HTML/CSS and JavaScript and it is still incompleted.
+This website was made just for fun and to test some HTML/CSS and JavaScript and it is still **incomplete**.
 ## In myWebSite you can find that it is:
 * Responsive.
 * The contact form is validated with javaScript.
