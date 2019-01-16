@@ -1,3 +1,25 @@
+.manuBtn {
+  position: absolute;
+  z-index: 3;
+  right: 40px;
+  top: 40px;
+  cursor: pointer;
+  transition: all 1s ease-out; }
+  .manuBtn .menuLine {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    transition: all 1s ease-out; }
+  .manuBtn.close {
+    transform: rotate(180deg); }
+    .manuBtn.close .menuLine:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .manuBtn.close .menuLine:nth-child(2) {
+      opacity: 0; }
+    .manuBtn.close .menuLine:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
 * {
   box-sizing: border-box; }
 
@@ -20,7 +42,7 @@ body {
       height: 100%;
       width: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.5); }
+      background: rgba(68, 68, 68, 0.8); }
 
 h1,
 h2,
@@ -49,7 +71,7 @@ header {
 
 .textSeconday {
   color: darkred;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
 
 main {
   padding: 5rem;

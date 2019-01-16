@@ -1,0 +1,35 @@
+.manuBtn {
+  position: absolute;
+  z-index: 3;
+  right: 40px;
+  top: 40px;
+  cursor: pointer;
+  @include easeOut;
+
+  .menuLine {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    @include easeOut;
+  }
+
+  &.close {
+    transform: rotate(180deg);
+
+    .menuLine {
+      // first line rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      // 2nd line hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      // 3rd line rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
