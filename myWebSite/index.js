@@ -45,22 +45,26 @@ message.style.color = "black";
 
 sendbtn.addEventListener("click", function() {
     if (!name.value) {  
-    name.placeholder = "Enter the name";
+    name.value = "Enter the name";
     name.style.border = "2px solid red";
+    name.style.color = "red"
     name.focus();
     name.addEventListener("click", function() {
         name.placeholder = "Name";
+        name.value = " ";
         name.style.border = "none";
+        name.style.color = "black"
     })
     } 
 
     else if (!phone.value || !phone.value.match(phoneRegex)){
-        phone.value = "";
-        phone.placeholder = "Enter the phone number (Digits only)";
-        phone.style.border = "2px solid red";
+        phone.value = "Enter the phone number (Digits only) ten Digits or more";
+        phone.style.color = "red"
+        phone.style.border = "2px solid red";   
         phone.addEventListener("click", function() {
-            phone.placeholder = "Enter the phone number (Digits Only)";
+            phone.placeholder = "Enter the phone number (Digits only) ten Digits or more";
             phone.style.border = "none";
+            phone.style.color = "black"
         })
     }
     else if (!email.value){
