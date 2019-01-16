@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Responsive Website ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o main/css/ --recursive"
+  },
+  "keywords": [
+    "Seif",
+    "Responsive",
+    "portfolio"
+  ],
+  "author": "Seif Tabaja",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
