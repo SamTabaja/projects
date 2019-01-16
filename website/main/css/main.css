@@ -1,2 +1,67 @@
+* {
+  box-sizing: border-box; }
+
 body {
-  background: darkred; }
+  background: #444;
+  color: white;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  line-height: 1.5; }
+  body#bgImage {
+    background: url(../images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bgImage:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.5); }
+
+h1,
+h2,
+h3 {
+  margin: 0px;
+  font-weight: 500; }
+  h1.lgHeading,
+  h2.lgHeading,
+  h3.lgHeading {
+    font-size: 5rem; }
+  h1.smHeading,
+  h2.smHeading,
+  h3.smHeading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(71, 71, 71, 0.2); }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.textSeconday {
+  color: darkred;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+main {
+  padding: 5rem;
+  height: 100%; }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: darkred;
+        transition: all 1s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
