@@ -1,11 +1,11 @@
 $main-color: #444;
 $secondary-color: darkred;
 $home-Image: url(../images/background.jpg);
-$background-opacity: 0.8;
+$background-opacity: 0.7;
 $show-image: true;
 
 @mixin easeOut {
-  transition: all 1s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 @mixin background {
@@ -26,5 +26,29 @@ $show-image: true;
         background: rgba($main-color, $background-opacity);
       }
     }
+  }
+}
+
+@mixin mediaSmall {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMeduim {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLarge {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaExtra {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }

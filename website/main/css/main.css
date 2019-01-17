@@ -4,13 +4,13 @@
   right: 40px;
   top: 40px;
   cursor: pointer;
-  transition: all 1s ease-out; }
+  transition: all 0.7s ease-out; }
   .manuBtn .menuLine {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: white;
-    transition: all 1s ease-out; }
+    transition: all 0.7s ease-out; }
   .manuBtn.close {
     transform: rotate(180deg); }
     .manuBtn.close .menuLine:nth-child(1) {
@@ -19,6 +19,93 @@
       opacity: 0; }
     .manuBtn.close .menuLine:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menuBranding, .menuNav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menuNav {
+    margin: 0;
+    padding: 0;
+    background: rgba(65, 65, 65, 0.2);
+    list-style: none;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.7s ease-out; }
+    .menuNav.show {
+      transform: translate3d(0, 0, 0); }
+  .menuBranding {
+    background: rgba(55, 55, 55, 0.9);
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.7s ease-out; }
+    .menuBranding.show {
+      transform: translate3d(0, 0, 0); }
+    .menuBranding .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../images/portrait.jpg");
+      border-radius: 50%;
+      border: 3px solid darkred; }
+  .menu .navItem {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.7s ease-out; }
+    .menu .navItem.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .navItem.current > a {
+      color: darkred; }
+  .menu .navLink {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    padding: 1rem 0;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: all 0.7s ease-out; }
+    .menu .navLink:hover {
+      color: darkred; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lgHeading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menuNav,
+  div.menuBranding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menuNav.show,
+    div.menuBranding.show {
+      transform: translate3d(0, 0, 0); }
+  .menuNav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 25px; }
+  .menuBranding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menuBranding .portrait {
+      background: url(../images/portrait_small.jpg);
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
 
 * {
   box-sizing: border-box; }
@@ -42,7 +129,7 @@ body {
       height: 100%;
       width: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.8); }
+      background: rgba(68, 68, 68, 0.7); }
 
 h1,
 h2,
@@ -70,8 +157,7 @@ header {
   width: 100%; }
 
 .textSeconday {
-  color: darkred;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
+  color: darkred; }
 
 main {
   padding: 5rem;
@@ -82,7 +168,7 @@ main {
       padding: 0.4rem; }
       main .icons a:hover {
         color: darkred;
-        transition: all 1s ease-out; }
+        transition: all 0.7s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {

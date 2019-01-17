@@ -1,6 +1,7 @@
 //npm run sass .. to run the sass script
-@import '_config';
-@import '_menu';
+@import "_config";
+@import "_menu";
+@import "mobile";
 * {
   box-sizing: border-box;
 }
@@ -45,7 +46,6 @@ header {
 
 .textSeconday {
   color: $secondary-color;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 main {

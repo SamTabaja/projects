@@ -33,3 +33,88 @@
     }
   }
 }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &Branding,
+  &Nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  //navigation side animation
+  &Nav {
+    margin: 0;
+    padding: 0;
+    background: rgba(darken($main-color, 1), 0.2);
+    list-style: none;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  //brand side animation
+  &Branding {
+    background: rgba(darken($main-color, 5), 0.9);
+    transform: translate3d(0, -100%, 0);
+    @include easeOut();
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../images/portrait.jpg");
+      border-radius: 50%;
+      border: 3px solid $secondary-color;
+    }
+  }
+
+  .navItem {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut();
+
+    //silde from right
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .navLink {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    padding: 1rem 0;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}

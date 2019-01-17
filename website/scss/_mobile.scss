@@ -1,0 +1,52 @@
+// Extra
+@include mediaExtra {
+}
+
+@include mediaLarge {
+}
+
+@include mediaMeduim {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lgHeading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  ul.menuNav,
+  div.menuBranding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menuNav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 25px;
+  }
+
+  .menuBranding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .portrait {
+      background: url(../images/portrait_small.jpg);
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+@include mediaSmall {
+  main#home h1 {
+    margin-top: 10vh;
+  }
+}
