@@ -16,8 +16,8 @@
     }
   }
 
-  ul.menuNav,
-  div.menuBranding {
+  .menuNav,
+  .menuBranding {
     float: none;
     width: 100%;
     min-height: 0;
@@ -31,6 +31,7 @@
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 25px;
+    background: rgba(darken($main-color, 2), 0.98);
   }
 
   .menuBranding {
@@ -46,7 +47,11 @@
 }
 
 @include mediaSmall {
-  main#home h1 {
+  main#home > h1 {
     margin-top: 10vh;
+  }
+
+  .menuLink {
+    font-size: 10px;
   }
 }

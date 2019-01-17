@@ -50,6 +50,7 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+
     float: left;
     width: 50%;
     height: 100vh;
@@ -60,7 +61,7 @@
   &Nav {
     margin: 0;
     padding: 0;
-    background: rgba(darken($main-color, 1), 0.2);
+    background: rgba(darken($main-color, 5), 0.2);
     list-style: none;
     transform: translate3d(0, 100%, 0);
     @include easeOut;
@@ -97,11 +98,7 @@
     &.show {
       transform: translate3d(0, 0, 0);
     }
-
-    &.current > a {
-      color: $secondary-color;
     }
-  }
 
   .navLink {
     display: inline-block;
