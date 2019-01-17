@@ -98,7 +98,7 @@
     &.show {
       transform: translate3d(0, 0, 0);
     }
-    }
+  }
 
   .navLink {
     display: inline-block;
@@ -112,6 +112,12 @@
 
     &:hover {
       color: $secondary-color;
+    }
+  }
+
+  @for $x from 1 through 4 {
+    .navItem:nth-child(#{$x}) {
+      transition-delay: $x * 0.1s;
     }
   }
 }

@@ -73,6 +73,14 @@
     transition: all 0.7s ease-out; }
     .menu .navLink:hover {
       color: darkred; }
+  .menu .navItem:nth-child(1) {
+    transition-delay: 0.1s; }
+  .menu .navItem:nth-child(2) {
+    transition-delay: 0.2s; }
+  .menu .navItem:nth-child(3) {
+    transition-delay: 0.3s; }
+  .menu .navItem:nth-child(4) {
+    transition-delay: 0.4s; }
 
 @media screen and (max-width: 768px) {
   main {
