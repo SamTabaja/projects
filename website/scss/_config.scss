@@ -1,11 +1,12 @@
-$main-color: #444;
-$secondary-color: darkred;
+$main-color: white;
+$main-heading-color: black;
+$secondary-color: rgb(180, 3, 3);
 $home-Image: url(../images/background.jpg);
-$background-opacity: 0.8;
+$background-opacity: 0.6;
 $show-image: true;
 
 @mixin easeOut {
-  transition: all 0.7s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 @mixin background {

@@ -7,10 +7,10 @@
   @include easeOut;
 
   .menuLine {
-    width: 28px;
+    width: 30px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: white;
+    background: $main-heading-color;
     @include easeOut;
   }
 
@@ -21,14 +21,17 @@
       // first line rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
+        background: $secondary-color;
       }
       // 2nd line hide
       &:nth-child(2) {
         opacity: 0;
+        background: white;
       }
       // 3rd line rotate
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+        background: $secondary-color;
       }
     }
   }
@@ -50,7 +53,6 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-
     float: left;
     width: 50%;
     height: 100vh;
@@ -61,19 +63,20 @@
   &Nav {
     margin: 0;
     padding: 0;
-    background: rgba(darken($main-color, 5), 0.2);
+    background: rgba(darken($main-color, 5), 0.9);
     list-style: none;
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
     &.show {
       transform: translate3d(0, 0, 0);
+      border-left: 4px solid $secondary-color;
     }
   }
 
   //brand side animation
   &Branding {
-    background: rgba(darken($main-color, 5), 0.9);
+    background: rgba(darken($main-color, 5), 0.7);
     transform: translate3d(0, -100%, 0);
     @include easeOut();
 
@@ -98,15 +101,20 @@
     &.show {
       transform: translate3d(0, 0, 0);
     }
+
+    &.current > a {
+      color: $secondary-color;
+    }
   }
 
   .navLink {
     display: inline-block;
     position: relative;
-    font-size: 30px;
-    padding: 1rem 0;
-    font-weight: 500;
-    color: white;
+    font-weight: bold;
+    //padding: 1rem 0;
+    font-family: "Timmana", sans-serif;
+
+    color: $main-heading-color;
     text-decoration: none;
     @include easeOut;
 
