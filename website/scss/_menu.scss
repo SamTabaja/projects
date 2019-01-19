@@ -76,7 +76,7 @@
 
   //brand side animation
   &Branding {
-    background: rgba(darken($main-color, 5), 0.7);
+    background: rgba(darken($main-color, 5), 0.8);
     transform: translate3d(0, -100%, 0);
     @include easeOut();
 
@@ -87,7 +87,7 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url("../images/portrait.jpg");
+      background: url("../images/me.jpeg");
       border-radius: 50%;
       border: 3px solid $secondary-color;
     }

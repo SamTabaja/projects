@@ -43,8 +43,8 @@ header {
   color: black;
 }
 
-.bioTitle {
-  font-family: "Timmana", sans-serif;
+.bioCompany {
+  margin: 0.5rem 0;
 }
 
 main {
@@ -155,8 +155,7 @@ main {
     width: 100%;
 
     &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
+      opacity: 0.3;
       @include easeOut;
     }
   }
