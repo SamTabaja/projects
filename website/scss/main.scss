@@ -55,7 +55,7 @@ main {
     margin: 0px;
 
     a {
-      padding: 0.4rem;
+      padding: 1rem;
       color: $main-heading-color;
 
       &:hover {
@@ -91,12 +91,7 @@ main {
 }
 
 .title {
-  margin-bottom: 2rem;
-}
-
-.play {
-  font-family: "Play", sans-serif;
-  font-weight: bold;
+  margin: 0 0 2rem 0;
 }
 
 // about
@@ -161,37 +156,6 @@ main {
   }
 }
 
-//Contact
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
-
-  div {
-    font-size: 1.75rem;
-
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 2rem;
-    color: black;
-    border: 2px solid $secondary-color;
-    @include easeOut;
-    &:hover {
-      background: $secondary-color;
-      color: white;
-      @include easeOut;
-      a {
-        color: black;
-      }
-    }
-  }
-}
-
-.contactIcon {
-  color: $secondary-color;
-}
-
 .btn {
   display: block;
   padding: 0.5rem 1rem;
@@ -226,7 +190,7 @@ main {
 
   .iconsFooter {
     a {
-      padding: 0 0.4rem 0 0.1rem;
+      padding: 0 1rem;
 
       &:hover {
         color: black;

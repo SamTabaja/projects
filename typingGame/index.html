@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WordBeater</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class=" ">
+    <header class="bg-primary text-white text-center p-5 mb-5">
+      <h1>WordBeater</h1>
+    </header>
+    <div class="container text-center">
+      <!-- Word & Input -->
+      <div class="row">
+        <div class=" mx-auto w-50">
+          <select class="form-control mb-5 w-50" id="selectList">
+            <option value="0">Select Defficulty ...</option>
+            <option value="1">easy (6 sec)</option>
+            <option value="2">meduim (4 sec)</option>
+            <option value="3">hard (2 sec)</option>
+          </select>
+          <h4 class=".text-primary">
+            Type The Given Word Within
+            <span class="text-danger " id="seconds">Select Time</span> Seconds:
+          </h4>
+          <h2 class="display-2 mb-5" id="current-word">hello</h2>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            placeholder="Start typing..."
+            id="word-input"
+            autofocus
+          />
+          <h4 class="mt-5" id="message"></h4>
+
+          <!-- Time & Score Columns -->
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <h3>Time Left: <span id="time">0</span></h3>
+            </div>
+            <div class="col-md-6">
+              <h3>Score: <span id="score">0</span></h3>
+            </div>
+          </div>
+
+          <div class="w3-light-grey">
+            <div
+              class="progress"
+              style="height:24px;width:0%;background-color: green"
+            ></div>
+          </div>
+
+          <!-- Instructions -->
+          <div class="row mt-5">
+            <div class="col-md-12">
+              <div class="card card-body bg-warning text-black">
+                <h5>Instructions</h5>
+                <p>
+                  Type each word in the given amount of seconds to score. To
+                  play again, just type the current word. Your score will reset
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
