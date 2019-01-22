@@ -1,0 +1,118 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* header */
+#topHeader {
+  background-image: url("images/bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* name and title */
+
+#nameTitle {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+}
+
+.mainText {
+  font-family: "Rubik Mono One", sans-serif;
+  color: white;
+}
+
+#name {
+  font-weight: 500;
+  font-size: 9rem;
+  line-height: 130px;
+}
+
+#title {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 70px;
+  margin: 0 0 0 2rem;
+}
+
+/* icons */
+.icons {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+}
+
+.icons a {
+  color: white;
+  text-decoration: none;
+  margin: 2rem 0;
+  padding: 0.5;
+}
+
+.icons a:hover {
+  color: #ffe7ab;
+  transition: all 0.5s ease-out;
+}
+
+/* about section */
+
+#about {
+}
+
+.section {
+  width: 90%;
+  padding: 1rem;
+  margin: 10rem auto;
+  text-align: center;
+}
+.sectionTitle {
+  font-family: Rubik, sans-serif;
+  color: black;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  font-size: 4rem;
+}
+
+.sectionPara {
+  font-family: Roboto Mono, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: justify;
+}
+
+#exp {
+  width: 90%;
+  margin: 5rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+}
+
+.jobTitle {
+  font-family: Roboto Mono, sans-serif;
+  color: black;
+  font-size: 1.5em;
+}
+
+.companyTitle {
+  font-family: Roboto Mono, sans-serif;
+  font-size: 1.5em;
+  padding: 0.5rem 0 1rem 0;
+  text-align: justify;
+  text-align: center;
+}
+
+.jobPara {
+  font-family: Roboto Mono, sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  text-align: justify;
+}
