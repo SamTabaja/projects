@@ -1,8 +1,8 @@
 window.addEventListener("load", begin);
 
-//change level
 let level;
 let time;
+let tScore = 0;
 let score = 0;
 let playing;
 let width = 0;
@@ -10,11 +10,14 @@ let width = 0;
 const wordInput = document.querySelector("#word-input");
 const currentWord = document.querySelector("#current-word");
 const scoreDisplay = document.querySelector("#score");
+const scoreClass = document.querySelector(".scoreClass");
 const timeDisplay = document.querySelector("#time");
 const message = document.querySelector("#message");
 const seconds = document.querySelector("#seconds");
 const progress = document.querySelector(".progress");
 const selectList = document.querySelector("#selectList");
+const selectWord = document.querySelector("#selectWord");
+const topScore = document.querySelector(".topScore");
 
 const words = [
   "hat",
@@ -40,37 +43,30 @@ const words = [
   "laughter",
   "magic",
   "master",
-  "space",
-  "definition"
+  "space"
 ];
 
 function begin() {
-  // show number of seconds
   getWord(words);
-  // call countdown every second
+  styleScore(score);
   setInterval(timeCountDown, 1000);
-  //start matching word input
   wordInput.addEventListener("input", checkMatch);
-  //check game status
   setInterval(checkGameStatus, 50);
 }
 
 let difficulty = selectList.addEventListener("change", function() {
   let choice = selectList.options[selectList.selectedIndex].value;
   if (choice == 1) {
-    console.log("one");
     seconds.innerHTML = 6;
     level = 7;
   } else if (choice == 2) {
-    console.log("two");
     seconds.innerHTML = 4;
     level = 5;
   } else if (choice == 3) {
-    console.log("three");
     seconds.innerHTML = 2;
     level = 3;
   }
-  console.log(level);
+
   time = level;
   return level;
 });
@@ -82,6 +78,7 @@ function timeCountDown() {
   } else if (time === 0) {
     // game over
     playing = false;
+    handleTopScore();
   }
   // show time to Dom
   timeDisplay.innerHTML = time;
@@ -130,7 +127,36 @@ function checkGameStatus() {
   if (!playing && time === 0) {
     message.className += " text-danger";
     message.innerHTML = "Gamer Over";
+    progress.style.width = 0;
     score = -1;
     width = -1;
+    styleScore();
+    handleTopScore();
+  } else {
+    styleScore();
+  }
+}
+
+function handleTopScore() {
+  if (score > tScore) {
+    tScore = score;
+    topScore.innerHTML = tScore;
+    console.log("score");
+  }
+}
+
+function styleScore() {
+  if (score == 0) {
+    scoreClass.className = " ";
+    scoreClass.className += " bg-danger text-white";
+  } else if (score >= 2 && score < 5) {
+    scoreClass.className = " ";
+    scoreClass.className += " bg-warning text-black";
+  } else if (score >= 5 && score < 10) {
+    scoreClass.className = " ";
+    scoreClass.className += " bg-success text-white";
+  } else if (score >= 10) {
+    scoreClass.className = " ";
+    scoreClass.className += " bg-primary text-white";
   }
 }
