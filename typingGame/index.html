@@ -35,7 +35,13 @@
             Type The Given Word Within
             <span class="text-danger " id="seconds">Select Time</span> Seconds:
           </h4>
-          <h2 class="display-2 mb-5" id="current-word">hello</h2>
+          <h2
+            style="font-weight: bold; border-radius: 10px;"
+            class="display-3 mb-3 p-4"
+            id="current-word"
+          >
+            hello
+          </h2>
           <input
             type="text"
             class="form-control form-control-lg"
@@ -48,7 +54,15 @@
           <!-- Time & Score Columns -->
           <div class="row mt-5">
             <div class="col-md-6">
-              <h3>Time Left: <span id="time">0</span></h3>
+              <h3>
+                Time Left:
+                <span
+                  class="bg-danger text-white"
+                  id="time"
+                  style="padding: 0 0.5em; font-weight: bold; border-radius: 10px;"
+                  >0</span
+                >
+              </h3>
             </div>
             <div class="col-md-6">
               <h3>
@@ -73,19 +87,24 @@
 
           <div class="w3-light-grey">
             <div
-              class="progress"
-              style="height:24px;width:0%;background-color: green"
+              class="progress bg-primary"
+              style="height:24px;width:0%;"
             ></div>
           </div>
 
           <!-- Instructions -->
           <div class="row mt-5">
             <div class="col-md-12">
-              <div class="card card-body bg-warning text-black">
+              <div
+                class="card card-body bg-primary text-white"
+                style="font-weight: bold"
+              >
                 <h5>Instructions</h5>
                 <p>
-                  Type each word in the given amount of seconds to score. To
-                  play again, just type the current word. Your score will reset
+                  First, Select the time which indicates the difficulty level,
+                  then Type each word in the given amount of seconds to score.
+                  To play again, just type the current word. Your score will
+                  reset
                 </p>
               </div>
             </div>

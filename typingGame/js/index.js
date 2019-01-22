@@ -47,11 +47,21 @@ const words = [
 ];
 
 function begin() {
+  preBegin();
   getWord(words);
   styleScore(score);
   setInterval(timeCountDown, 1000);
   wordInput.addEventListener("input", checkMatch);
   setInterval(checkGameStatus, 50);
+}
+
+function preBegin() {
+  if (time === 0 || time === NaN || time === undefined) {
+    wordInput.disabled = true;
+    timeDisplay.innerHTML = "zero";
+  } else {
+    wordInput.disabled = false;
+  }
 }
 
 let difficulty = selectList.addEventListener("change", function() {
@@ -75,8 +85,10 @@ function timeCountDown() {
   // make sure time is not out
   if (time > 0) {
     time--;
+    preBegin();
   } else if (time === 0) {
     // game over
+    preBegin();
     playing = false;
     handleTopScore();
   }
@@ -152,10 +164,10 @@ function styleScore() {
   } else if (score >= 2 && score < 5) {
     scoreClass.className = " ";
     scoreClass.className += " bg-warning text-black";
-  } else if (score >= 5 && score < 10) {
+  } else if (score >= 5 && score < 9) {
     scoreClass.className = " ";
-    scoreClass.className += " bg-success text-white";
-  } else if (score >= 10) {
+    scoreClass.className += " bg-dark text-white";
+  } else if (score > 9) {
     scoreClass.className = " ";
     scoreClass.className += " bg-primary text-white";
   }
