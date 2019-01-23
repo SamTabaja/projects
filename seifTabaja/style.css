@@ -212,3 +212,34 @@
   font-weight: bolder;
   display: inline;
 }
+
+footer {
+  height: 40vh;
+  background: #141414;
+}
+
+.footDiv {
+  margin: 0px auto;
+  text-align: center;
+}
+
+.inline {
+  display: inline-block;
+  padding: 1em;
+}
+
+.footerImg {
+  border-radius: 50% 70% 70% 50%/ 50% 50% 70% 70%;
+}
+
+.footerMsg {
+  font-family: Roboto Mono, sans-serif;
+  color: white;
+  line-height: 3rem;
+  padding: 2em;
+}
+
+.footerMsg a {
+  color: white;
+  text-decoration: none;
+}
