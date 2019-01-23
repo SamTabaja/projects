@@ -69,16 +69,17 @@
 
 .section {
   width: 90%;
-  padding: 1rem;
-  margin: 10rem auto;
+  padding: 0.5em;
+  margin: 10em auto 0 auto;
   text-align: center;
 }
 .sectionTitle {
   font-family: Rubik, sans-serif;
   color: black;
   padding: 1rem;
-  margin: 1rem 1rem;
-  font-size: 4rem;
+  margin: 1em auto 2em auto;
+  font-weight: 900;
+  font-size: 90px;
 }
 
 .sectionPara {
@@ -110,9 +111,104 @@
   text-align: center;
 }
 
-.jobPara {
+.para {
   font-family: Roboto Mono, sans-serif;
   font-weight: 200;
   font-size: 20px;
   text-align: justify;
+}
+
+/* work */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 0 0 20% 0;
+}
+.projectText {
+}
+
+.proTitle {
+  font-family: Rubik, sans-serif !important;
+  font-weight: 900;
+  font-size: 60px;
+  text-align: left;
+}
+
+.projectImg {
+  width: 70%;
+  box-shadow: 10px 10px 5px lightgray;
+}
+
+.projectSlider {
+}
+
+.usedTechnologies {
+  text-align: left;
+  padding: 1em 0.5em;
+  margin: 1em 0;
+}
+
+.technology {
+  font-family: Open Sans, sans-serif;
+  display: inline;
+  padding: 0.5em 0.75em;
+  margin: 0 0.5em 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+.HTML {
+  background: darkred;
+  color: white;
+}
+
+.CSS {
+  background: #000080;
+  color: white;
+}
+
+.JavaScript {
+  background: #ffc107;
+  color: black;
+}
+
+.Bootsrap {
+  background: #602c50;
+  color: white;
+}
+
+.React {
+  background: black;
+  color: #61dbfb;
+}
+
+.view {
+  text-align: left;
+  padding: 1em;
+}
+
+.visit {
+  font-family: Roboto Mono, sans-serif;
+  font-weight: bold;
+  padding: 0.5em;
+  margin: 10px 0;
+  color: black;
+  font-size: 22px;
+  text-decoration: none !important;
+}
+
+.visit:hover {
+  color: black;
+}
+
+.arrow {
+  display: none;
+}
+
+.visit:hover > span {
+  color: darkred;
+  font-weight: bolder;
+  display: inline;
 }
