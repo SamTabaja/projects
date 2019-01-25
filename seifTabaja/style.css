@@ -68,13 +68,12 @@
 .section {
   width: 90%;
   padding: 0.5em;
-  margin: 10em auto 0 auto;
+  margin: 0 auto 0 auto;
   text-align: center;
 }
 .sectionTitle {
   font-family: Rubik, sans-serif;
   color: black;
-  padding: 1rem;
   margin: 1em auto 2em auto;
   font-weight: 900;
   font-size: 90px;
@@ -84,7 +83,7 @@
   font-family: Roboto Mono, sans-serif;
   font-weight: 200;
   font-size: 20px;
-  text-align: justify;
+  text-align: left;
 }
 
 /* work */
@@ -257,7 +256,7 @@ footer {
 
   /* work */
   .sectionTitle {
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
   }
 
@@ -306,8 +305,13 @@ footer {
     color: white;
   }
 
+  footer {
+    height: 50vh;
+  }
+
   .inline {
-    margin-top: 10px;
+    margin-top: 5px;
+    padding: 10px;
   }
 
   .footerMsg {
