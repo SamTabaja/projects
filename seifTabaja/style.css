@@ -29,6 +29,7 @@
   font-weight: 500;
   font-size: 9rem;
   line-height: 130px;
+  margin: 0px;
 }
 
 #title {
@@ -58,14 +59,11 @@
 }
 
 .icons a:hover {
-  color: #ffe7ab;
+  color: #bbc3ab;
   transition: all 0.5s ease-out;
 }
 
 /* about section */
-
-#about {
-}
 
 .section {
   width: 90%;
@@ -82,35 +80,6 @@
   font-size: 90px;
 }
 
-.sectionPara {
-  font-family: Roboto Mono, sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  text-align: justify;
-}
-
-#exp {
-  width: 90%;
-  margin: 5rem auto 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
-}
-
-.jobTitle {
-  font-family: Roboto Mono, sans-serif;
-  color: black;
-  font-size: 1.5em;
-}
-
-.companyTitle {
-  font-family: Roboto Mono, sans-serif;
-  font-size: 1.5em;
-  padding: 0.5rem 0 1rem 0;
-  text-align: justify;
-  text-align: center;
-}
-
 .para {
   font-family: Roboto Mono, sans-serif;
   font-weight: 200;
@@ -122,10 +91,8 @@
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 4rem;
   margin: 0 0 20% 0;
-}
-.projectText {
 }
 
 .proTitle {
@@ -136,11 +103,8 @@
 }
 
 .projectImg {
-  width: 70%;
+  width: 100%;
   box-shadow: 10px 10px 5px lightgray;
-}
-
-.projectSlider {
 }
 
 .usedTechnologies {
@@ -225,11 +189,12 @@ footer {
 
 .inline {
   display: inline-block;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .footerImg {
   border-radius: 50% 70% 70% 50%/ 50% 50% 70% 70%;
+  border: 4px solid #dc143c;
 }
 
 .footerMsg {
@@ -242,4 +207,299 @@ footer {
 .footerMsg a {
   color: white;
   text-decoration: none;
+}
+
+@media screen and (min-width: 250px) and (max-width: 500px) {
+  body {
+    background: black;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .projects {
+    display: grid;
+    grid-template-areas:
+      "txt"
+      "img";
+    grid-gap: 1rem;
+    margin: 0 auto 20% auto;
+  }
+
+  .projectText {
+    grid-area: txt;
+    padding: 0.25em;
+  }
+
+  .projectSlider {
+    grid-area: img;
+  }
+
+  #nameTitle {
+    top: 52%;
+  }
+
+  #name {
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 70px;
+  }
+
+  #title {
+    font-weight: 100;
+    font-size: 1rem;
+    margin: 0 0 0 1rem;
+  }
+
+  .size {
+    font-size: 35px;
+  }
+
+  .icons a {
+    margin: 1.25rem 0;
+    padding: 0.5;
+  }
+
+  /* work */
+  .sectionTitle {
+    font-size: 70px;
+    text-align: left;
+  }
+
+  .proTitle {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .para {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+
+  .projectImg {
+    width: 100%;
+  }
+  .usedTechnologies {
+    margin: 5px 0px;
+    padding: 0px;
+  }
+
+  .technology {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    padding: 0.5em;
+    font-weight: 500;
+    margin: 5px 0 0 auto;
+  }
+  .view {
+    text-align: center;
+    margin: 5px 0 0 auto;
+    border: solid;
+    padding: 0.5em;
+    background: black;
+    border-radius: 15px;
+  }
+
+  .visit {
+    font-size: 16px;
+    color: white;
+  }
+
+  .visit:hover {
+    color: white;
+  }
+
+  .footerMsg {
+    font-size: 25px;
+  }
+
+  .footerImg {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1170px) {
+  body {
+    background: red;
+  }
+  .usedTechnologies {
+  }
+
+  #nameTitle {
+    top: 52%;
+  }
+  #name {
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 90px;
+    margin: 0px;
+  }
+
+  #title {
+    font-weight: 200;
+    font-size: 1.25rem;
+    line-height: 70px;
+    margin: 0 0 0 1rem;
+  }
+
+  .size {
+    font-size: 40px;
+  }
+  .icons a {
+    margin: 1.5rem 0;
+    padding: 0.5;
+  }
+
+  /* work */
+  .projects {
+    grid-gap: 5rem;
+    margin: 0 0 40% 0;
+  }
+
+  .sectionTitle {
+    font-size: 80px;
+  }
+
+  .proTitle {
+    font-size: 35px;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+
+  .projectImg {
+    width: 400px;
+  }
+
+  .technology {
+    font-size: 16px;
+  }
+
+  .visit {
+    font-size: 18px;
+  }
+
+  .footerMsg {
+    font-size: 25px;
+  }
+
+  .footerImg {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1171px) and (max-width: 1300px) {
+  body {
+    background: orangered;
+  }
+
+  #name {
+    font-size: 6.5rem;
+  }
+
+  #title {
+    font-size: 1.5rem;
+  }
+
+  /* work */
+  .projects {
+    grid-gap: 5rem;
+    margin: 0 0 40% 0;
+  }
+
+  .sectionTitle {
+    font-size: 80px;
+  }
+
+  .proTitle {
+    font-size: 42px;
+  }
+
+  .para {
+    font-size: 18px;
+  }
+
+  .projectImg {
+    width: 100%;
+  }
+
+  .technology {
+    font-size: 18px;
+  }
+
+  .visit {
+    font-size: 20px;
+  }
+
+  .inline {
+    margin: 20px auto;
+  }
+
+  .footerMsg {
+    font-size: 25px;
+  }
+
+  .footerImg {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1499px) {
+  body {
+    background: gray;
+  }
+
+  #name {
+    font-size: 7rem;
+  }
+
+  #title {
+    font-size: 1.75rem;
+  }
+
+  /* work */
+  .projects {
+    grid-gap: 5rem;
+    margin: 0 0 40% 0;
+  }
+
+  .proTitle {
+    font-size: 50px;
+  }
+
+  .para {
+    font-size: 20px;
+  }
+
+  .projectImg {
+    width: 650px;
+  }
+
+  .technology {
+    font-size: 18px;
+  }
+
+  footer {
+    height: 40vh;
+    background: #141414;
+  }
+
+  .footDiv {
+    margin: 0px auto;
+    text-align: center;
+  }
+
+  .inline {
+    display: inline-block;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body {
+  }
 }
