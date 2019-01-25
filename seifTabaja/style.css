@@ -307,18 +307,20 @@ footer {
   }
 
   .inline {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .footerMsg {
     font-size: 16px;
     line-height: 1.25em;
     padding: 0px;
+    margin: 0px;
   }
 
   .footerImg {
     width: 150px;
     height: 150px;
+    margin: 0px;
   }
 }
 
