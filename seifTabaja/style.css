@@ -216,7 +216,7 @@ footer {
       "txt"
       "img";
     grid-gap: 1rem;
-    margin: 0 auto 20% auto;
+    margin: 0 auto 30% 10%;
   }
 
   .projectText {
@@ -258,7 +258,7 @@ footer {
   /* work */
   .sectionTitle {
     font-size: 70px;
-    text-align: left;
+    text-align: center;
   }
 
   .proTitle {
@@ -272,7 +272,7 @@ footer {
   }
 
   .projectImg {
-    width: 100%;
+    width: 250px;
   }
   .usedTechnologies {
     margin: 5px 0px;
@@ -287,6 +287,7 @@ footer {
     font-weight: 500;
     margin: 5px 0 0 auto;
   }
+
   .view {
     text-align: center;
     margin: 5px 0 0 auto;
@@ -305,13 +306,19 @@ footer {
     color: white;
   }
 
+  .inline {
+    margin-top: 20px;
+  }
+
   .footerMsg {
-    font-size: 25px;
+    font-size: 16px;
+    line-height: 1.25em;
+    padding: 0px;
   }
 
   .footerImg {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -420,7 +427,7 @@ footer {
 }
 
 @media screen and (min-width: 901px) and (max-width: 1170px) {
-  body {
+  main {
     background: red;
   }
   .usedTechnologies {
