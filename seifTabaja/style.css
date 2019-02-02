@@ -21,22 +21,22 @@
 }
 
 .mainText {
-  font-family: "Rubik Mono One", sans-serif;
+  font-family: Rubik, sans-serif !important;
   color: white;
 }
 
 #name {
   font-weight: 500;
-  font-size: 9rem;
-  line-height: 130px;
-  margin: 0px;
+  font-size: 8rem;
+  line-height: 110px;
+  margin-bottom: 10px;
 }
 
 #title {
   font-weight: 300;
   font-size: 2rem;
   line-height: 70px;
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 1rem;
 }
 
 /* icons */
@@ -184,7 +184,6 @@ footer {
 
 .footerImg {
   border-radius: 50% 70% 70% 50%/ 50% 50% 70% 70%;
-  border: 4px solid #dc143c;
 }
 
 .footerMsg {
