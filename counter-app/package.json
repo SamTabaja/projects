@@ -2,7 +2,6 @@
   "name": "couter-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://samtabaja.github.io/projects/counter-app/public",
   "dependencies": {
     "bootstrap": "^4.1.1",
     "font-awesome": "^4.7.0",
@@ -15,7 +14,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy": "gh-pages -d public",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
