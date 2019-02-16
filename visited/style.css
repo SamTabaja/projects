@@ -1,4 +1,54 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 80%;
+  margin: 0px auto;
+}
+
+#container {
+  margin: 0px 10px;
+  display: grid;
+  grid-template-columns: 1.75fr 1fr;
+}
+#right {
+  padding: 1em;
+}
+
+h3 {
+  margin: 1em 1em 2em 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.lbl {
+  padding: 10px;
+  font-size: 22px;
+  margin: 0.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inpt {
+  padding: 5px;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+  margin: 0.25em 1em;
+}
+.inputs {
+  margin: 1em;
+}
+#left {
+}
 #map {
-  height: 85vh;
-  width: 100%;
+  height: 88vh;
+}
+
+#title {
+  background: black;
+  border: 3px solid black;
+  margin: 5px auto;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

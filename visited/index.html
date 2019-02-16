@@ -2,11 +2,32 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
-    <title>Visited</title>
+    <title>PushPinMap</title>
   </head>
   <body>
-    <h1>Visited</h1>
-    <div id="map"></div>
+    <div id="title">
+      <h1>PUSH PIN MAP</h1>
+    </div>
+    <div id="container">
+      <div id="left">
+        <div id="map"></div>
+      </div>
+
+      <div id="right">
+        <h3>
+          Click anywhere on the map to fetch the longitude
+          and latitude
+        </h3>
+        <div class="inputs">
+          <label class="lbl">Latitude</label> <br />
+          <input class="inpt" id="latInput" type="text" />
+        </div>
+        <div class="inputs">
+          <label class="lbl">Longitude</label><br />
+          <input class="inpt" id="longInput" type="text" />
+        </div>
+      </div>
+    </div>
 
     <script src="app.js"></script>
     <script
