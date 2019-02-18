@@ -80,7 +80,7 @@ h2 {
 #pushPin:hover {
   background: #dc3545;
   color: white;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in;
 }
 
 #map {
