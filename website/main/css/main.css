@@ -169,7 +169,8 @@ main {
 
 .aboutInfo {
   display: grid;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio"
+ "job1 job2 job3";
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
   color: black;
@@ -301,7 +302,11 @@ main {
       width: 150px;
       height: 150px; }
   .aboutInfo {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage"
+ "bio"
+ "job1"
+ "job2"
+ "job3";
     grid-auto-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }

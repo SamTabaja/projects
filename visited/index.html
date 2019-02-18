@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Play|Timmana"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>PushPinMap</title>
   </head>
@@ -16,7 +26,8 @@
       <div id="right">
         <h3>
           Click anywhere on the map to fetch the longitude
-          and latitude
+          and latitude and then click the Push Pin button to
+          add a Pin
         </h3>
         <div class="inputs">
           <label class="lbl">Latitude</label> <br />
@@ -25,6 +36,10 @@
         <div class="inputs">
           <label class="lbl">Longitude</label><br />
           <input class="inpt" id="longInput" type="text" />
+        </div>
+        <div id="pushPin" class="inputs">
+          <i class="fas fa-map-marker-alt"></i>
+          Push Pin
         </div>
       </div>
     </div>

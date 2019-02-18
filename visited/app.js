@@ -1,5 +1,6 @@
 let latInput = document.querySelector("#latInput");
 let longInput = document.querySelector("#longInput");
+let pushPin = document.querySelector("#pushPin");
 function initMap() {
   let options = {
     zoom: 4,
@@ -17,6 +18,18 @@ function initMap() {
     latInput.value = latitude;
     longInput.value = longitude;
     //console.log(event);
+  });
+
+  pushPin.addEventListener("click", () => {
+    // console.log(latInput.value);
+    // console.log(typeof longInput.value);
+    let marker = new google.maps.Marker({
+      position: {
+        lat: parseFloat(latInput.value),
+        lng: parseFloat(longInput.value)
+      },
+      map: map
+    });
   });
 
   let markers = [
@@ -94,13 +107,13 @@ function initMap() {
       position: props.coords,
       map: map
     });
-
-    // let infoWindow = new google.maps.InfoWindow({
-    //   content: props.info
-    // });
-
-    // marker.addListener("click", () => {
-    //   infoWindow.open(map, marker);
-    // });
   }
 }
+
+// let infoWindow = new google.maps.InfoWindow({
+//   content: props.info
+// });
+
+// marker.addListener("click", () => {
+//   infoWindow.open(map, marker);
+// });
