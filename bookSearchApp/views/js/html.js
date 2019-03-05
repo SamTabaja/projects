@@ -1,50 +1,30 @@
 window.onload = function() {
   // search by book title
   getBookButton.onclick = () => {
-    let url = "/api/books/" + title.value.toLowerCase();
-    info.innerHTML = "";
-    info.className = "mt-4 p-3";
-    info.className += " border border-warning";
-    divToggle(info);
-
-    let xhttp4 = new XMLHttpRequest();
-    xhttp4.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        let data = JSON.parse(xhttp4.responseText);
-        let dataLength = data.length;
-        appendData(dataLength, data, info);
-      }
-    };
-    xhttp4.open("GET", url, true);
-    xhttp4.send();
+    let titleSearch = title.value.toLowerCase();
+    if (titleSearch.trim().length == 0) {
+      return;
+    }
+    let url = "/api/books/" + titleSearch;
+    divToggleAndStyle(info, "warning");
+    fetchData(url, "Book not Found");
   };
 
   // Search by genre button
   getGenreButton.onclick = () => {
-    let url = "/api/genre/" + title.value.toLowerCase();
-    info.innerHTML = "";
-    info.className = "mt-4 p-3";
-    info.className += " border border-primary";
-    divToggle(info);
-    let xhttp4 = new XMLHttpRequest();
-    xhttp4.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        let data = JSON.parse(xhttp4.responseText);
-        let dataLength = data.length;
-        appendData(dataLength, data, info);
-      }
-    };
-    xhttp4.open("GET", url, true);
-    xhttp4.send();
+    let genreSearch = title.value.toLowerCase();
+    if (genreSearch.trim().length == 0) {
+      return;
+    }
+    let url = "/api/genre/" + genreSearch;
+    divToggleAndStyle(info, "primary");
+    fetchData(url, "Genre not Found");
   };
 
   // get all books button
   getAllBooksButton.onclick = () => {
     let url = "/api/books";
-    info.innerHTML = "";
-    info.className = "mt-4 p-3";
-    info.className += " border border-danger";
-    divToggle(info);
+    divToggleAndStyle(info, "danger");
     let xhttp4 = new XMLHttpRequest();
     xhttp4.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -59,9 +39,10 @@ window.onload = function() {
   };
 
   // helper functions --------->
-
-  // handle toggle
-  let divToggle = divName => {
+  // handle toggle and style
+  let divToggleAndStyle = (divName, style) => {
+    divName.innerHTML = "";
+    divName.className += `mt-4 p-3 border border-${style}`;
     if (divName.style.display === "block") {
       divName.style.display = "none";
     } else {
@@ -69,10 +50,9 @@ window.onload = function() {
     }
   };
   // append data to the HTML
-  let appendData = (arr, data, parentDiv) => {
+  let appendData = (arrLength, data, parentDiv) => {
     let ul = document.createElement("ul");
-
-    for (let i = 0; i < arr; i++) {
+    for (let i = 0; i < arrLength; i++) {
       let li = document.createElement("li");
       let title = document.createElement("h5");
       let author = document.createElement("h5");
@@ -100,5 +80,21 @@ window.onload = function() {
       parentDiv.appendChild(ul);
     }
   };
-};
 
+  let fetchData = (url, errorMsg) => {
+    let xhttp4 = new XMLHttpRequest();
+    xhttp4.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        let data = JSON.parse(xhttp4.responseText);
+        let dataLength = data.length;
+        if (dataLength == 0) {
+          info.innerHTML = errorMsg.bold();
+        } else {
+          appendData(dataLength, data, info);
+        }
+      }
+    };
+    xhttp4.open("GET", url, true);
+    xhttp4.send();
+  };
+};

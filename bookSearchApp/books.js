@@ -36,8 +36,6 @@ router.route("/books/:title").get((req, res) => {
           book.title[0].toLowerCase().includes(getParams)
         );
         res.json(bookTitle);
-        if (bookTitle.length == 0) {
-        }
       });
     }
   });
