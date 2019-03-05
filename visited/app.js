@@ -102,9 +102,9 @@ function initMap() {
     addCityMarker(e);
   });
 
-  function addCityMarker(props) {
+  function addCityMarker(markers) {
     let marker = new google.maps.Marker({
-      position: props.coords,
+      position: markers.coords,
       map: map
     });
   }

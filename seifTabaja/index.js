@@ -14,16 +14,12 @@ function changeImg() {
   document.slide.src = images[i];
   document.slide1.src = images2[i];
 
-  // Check If Index Is Under Max
   if (i < images.length - 1) {
-    // Add 1 to Index
     i++;
   } else {
-    // Reset Back To O
     i = 0;
   }
 
-  // Run function every x seconds
   setTimeout("changeImg()", time);
 }
 

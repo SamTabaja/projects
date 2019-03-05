@@ -1,40 +1,18 @@
 window.onload = function() {
-  //btuuns functions ---->
   // search by book title
   getBookButton.onclick = () => {
     let url = "/api/books/" + title.value.toLowerCase();
-    divToggle(info);
-    // clear values
-    errorMsg.innerHTML = "";
-    author.innerHTML = "";
-    genre.innerHTML = "";
-    price.innerHTML = "";
-    date.innerHTML = "";
-    disc.innerHTML = "";
-    // appending bootstrap css
+    info.innerHTML = "";
+    info.className = "mt-4 p-3";
     info.className += " border border-warning";
-    // getting data and append it to the HTML
+    divToggle(info);
+
     let xhttp4 = new XMLHttpRequest();
     xhttp4.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         let data = JSON.parse(xhttp4.responseText);
-        if (data.error) {
-          errorMsg.innerHTML =
-            "The book you entered does not exist";
-          return;
-        }
-        if (title.value == "") {
-          errorMsg.innerHTML = "You have entered no value";
-          return;
-        } else {
-          author.innerHTML = "Author: " + data.author[0];
-          genre.innerHTML = "Genre: " + data.genre[0];
-          price.innerHTML = "Price: " + data.price[0];
-          date.innerHTML =
-            "Publish Data: " + data.publish_date[0];
-          disc.innerHTML =
-            "Description: " + data.description[0];
-        }
+        let dataLength = data.length;
+        appendData(dataLength, data, info);
       }
     };
     xhttp4.open("GET", url, true);
@@ -43,16 +21,17 @@ window.onload = function() {
 
   // Search by genre button
   getGenreButton.onclick = () => {
-    genreInfo.innerHTML = "";
     let url = "/api/genre/" + title.value.toLowerCase();
-    divToggle(genreInfo);
+    info.innerHTML = "";
+    info.className = "mt-4 p-3";
+    info.className += " border border-primary";
+    divToggle(info);
     let xhttp4 = new XMLHttpRequest();
     xhttp4.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        genreInfo.className += " border border-primary";
         let data = JSON.parse(xhttp4.responseText);
         let dataLength = data.length;
-        appendData(dataLength, data, genreInfo);
+        appendData(dataLength, data, info);
       }
     };
     xhttp4.open("GET", url, true);
@@ -61,17 +40,18 @@ window.onload = function() {
 
   // get all books button
   getAllBooksButton.onclick = () => {
-    allData.innerHTML = "";
     let url = "/api/books";
-    divToggle(allData);
+    info.innerHTML = "";
+    info.className = "mt-4 p-3";
+    info.className += " border border-danger";
+    divToggle(info);
     let xhttp4 = new XMLHttpRequest();
     xhttp4.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        allData.className += " border border-danger";
         let data = JSON.parse(xhttp4.responseText);
         let len = data.catalog.book.length;
         let books = data.catalog.book;
-        appendData(len, books, allData);
+        appendData(len, books, info);
       }
     };
     xhttp4.open("GET", url, true);
@@ -79,6 +59,7 @@ window.onload = function() {
   };
 
   // helper functions --------->
+
   // handle toggle
   let divToggle = divName => {
     if (divName.style.display === "block") {
@@ -120,3 +101,43 @@ window.onload = function() {
     }
   };
 };
+
+// getBookButton.onclick = () => {
+//   let url = "/api/books/" + title.value.toLowerCase();
+//   divToggle(info);
+//   // clear values
+//   errorMsg.innerHTML = "";
+//   author.innerHTML = "";
+//   genre.innerHTML = "";
+//   price.innerHTML = "";
+//   date.innerHTML = "";
+//   disc.innerHTML = "";
+//   // appending bootstrap css
+//   info.className += " border border-warning";
+//   // getting data and append it to the HTML
+//   let xhttp4 = new XMLHttpRequest();
+//   xhttp4.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       let data = JSON.parse(xhttp4.responseText);
+//       if (data.error) {
+//         errorMsg.innerHTML =
+//           "The book you entered does not exist";
+//         return;
+//       }
+//       if (title.value == "") {
+//         errorMsg.innerHTML = "You have entered no value";
+//         return;
+//       } else {
+//         author.innerHTML = "Author: " + data.author[0];
+//         genre.innerHTML = "Genre: " + data.genre[0];
+//         price.innerHTML = "Price: " + data.price[0];
+//         date.innerHTML =
+//           "Publish Data: " + data.publish_date[0];
+//         disc.innerHTML =
+//           "Description: " + data.description[0];
+//       }
+//     }
+//   };
+//   xhttp4.open("GET", url, true);
+//   xhttp4.send();
+// };

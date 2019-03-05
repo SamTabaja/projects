@@ -64,28 +64,32 @@ function preBegin() {
   }
 }
 
-let difficulty = selectList.addEventListener("change", function() {
-  let choice = selectList.options[selectList.selectedIndex].value;
-  if (choice == 1) {
-    seconds.innerHTML = 6;
-    level = 7;
-  } else if (choice == 2) {
-    seconds.innerHTML = 4;
-    level = 5;
-  } else if (choice == 3) {
-    seconds.innerHTML = 2;
-    level = 3;
-  }
+let difficulty = selectList.addEventListener(
+  "change",
+  function() {
+    let choice =
+      selectList.options[selectList.selectedIndex].value;
+    if (choice == 1) {
+      seconds.innerHTML = 6;
+      level = 7;
+    } else if (choice == 2) {
+      seconds.innerHTML = 4;
+      level = 5;
+    } else if (choice == 3) {
+      seconds.innerHTML = 2;
+      level = 3;
+    }
 
-  time = level;
-  return level;
-});
+    time = level;
+    return level;
+  }
+);
 
 function timeCountDown() {
   // make sure time is not out
   if (time > 0) {
-    time--;
     preBegin();
+    time--;
   } else if (time === 0) {
     // game over
     preBegin();
@@ -99,7 +103,7 @@ function timeCountDown() {
 function checkMatch() {
   if (wordMatched()) {
     playing = true;
-    time = level + 1;
+    time = level;
     getWord(words);
     wordInput.value = "";
     score++;
@@ -139,13 +143,11 @@ function checkGameStatus() {
   if (!playing && time === 0) {
     message.className += " text-danger";
     message.innerHTML = "Gamer Over";
-    progress.style.width = 0;
-    score = -1;
+    progress.style.width = 0 + "%";
+    score = 0;
     width = -1;
     styleScore();
     handleTopScore();
-  } else {
-    styleScore();
   }
 }
 

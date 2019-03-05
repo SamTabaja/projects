@@ -28,20 +28,12 @@ router.route("/books/:title").get((req, res) => {
       let getParams = req.params.title;
       parser.parseString(text, function(err, result) {
         if (err) throw err;
-        let len = result.catalog.book.length;
-        let exist = 0;
-        for (let i = 0; i < len; i++) {
-          if (
-            getParams ===
-            result.catalog.book[i].title[0].toLowerCase()
-          ) {
-            res.json(result.catalog.book[i]);
-            exist = 1;
-          }
-        }
-        if (exist == 0) {
-          res.json({ error: true });
-        }
+        let books = result.catalog.book;
+
+        let booksTitles = books.filter(e =>
+          e.title[0].toLowerCase().includes(getParams)
+        );
+        res.json(booksTitles);
       });
     }
   });
@@ -58,13 +50,41 @@ router.route("/genre/:genre").get((req, res) => {
       parser.parseString(text, function(err, result) {
         if (err) throw err;
         let books = result.catalog.book;
-        let booksGenre = books.filter(
-          e => e.genre[0].toLowerCase() == getParams
+        let booksGenre = books.filter(e =>
+          e.genre[0].toLowerCase().includes(getParams)
         );
-        res.json(booksGenre); 
+        res.json(booksGenre);
       });
     }
   });
 });
 
 module.exports = router;
+
+// router.route("/books/:title").get((req, res) => {
+//   let xmlfile = __dirname + "/books.xml";
+//   fs.readFile(xmlfile, "utf-8", function(error, text) {
+//     if (error) {
+//       throw error;
+//     } else {
+//       let getParams = req.params.title;
+//       parser.parseString(text, function(err, result) {
+//         if (err) throw err;
+//         let len = result.catalog.book.length;
+//         let exist = 0;
+//         for (let i = 0; i < len; i++) {
+//           if (
+//             getParams ===
+//             result.catalog.book[i].title[0].toLowerCase()
+//           ) {
+//             res.json(result.catalog.book[i]);
+//             exist = 1;
+//           }
+//         }
+//         if (exist == 0) {
+//           res.json({ error: true });
+//         }
+//       });
+//     }
+//   });
+// });

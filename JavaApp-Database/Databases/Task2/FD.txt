@@ -1,0 +1,21 @@
+Departmentname, DepartmentAbbr	ProgramName	ProgramAbbr	BranchName	SSN	StudentName	StudentLogin	StudentProgram	StudentBranch	CourseCode	CourseName	CourseCredits	CoursePrerequi	CourseMandatoryBranch	CourseMandatoryProgram	CourseRecommendedBranch	Grade	CourseDepartment	Seats	Positon	ClassificationName
+
+
+
+Departmentname -> DepartmentAbbr
+
+Program(_name_, abbr)
+ProgramName -> ProgramAbbr
+
+SSN -> StudentName, StudentLogin, StudentProgram
+StudentLogin -> SSN, StudentName, StudentProgram
+
+
+SSN, CourseCode -> Grade
+SSN, CourseCode -> Positon
+
+CourseCode -> CourseName, CourseCredits
+CourseCode -> CoursePrerequi
+CourseCode -> Seats
+CourseCode -> ClassificationName
+
