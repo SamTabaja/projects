@@ -15,7 +15,7 @@
 
 ### How to Run
 
-- From the same directory, type in `npm start`> Notice that a message _Server is Started_ will be logged in the **Terminal**
+- From the same directory, type in `npm start`. Notice that a message _Server is Started_ will be logged in the **Terminal**
 - Open your browser (preferably Chrome or FireFox)
 - At the **URL** bar, type in `http://localhost:4000`
 - And here we go !!!!
@@ -23,9 +23,9 @@
 ### End Points
 
 - There are three _Express Routes_ as follows:
-  1- The first is to route to `api/books` which fetch all the books
-  2- the second is to route to `api/books/:title` which fetches the books based on a book title value received from the user _title_
-  3- the third is to route to `api/genre/:genre` which fetches the books based on a genre value received from the user _genre_
+ - The first is to route to `api/books` which fetch all the books
+ - the second is to route to `api/books/:title` which fetches the books based on a book title value received from the user _title_
+ - the third is to route to `api/genre/:genre` which fetches the books based on a genre value received from the user _genre_
 
 ### How to search
 
