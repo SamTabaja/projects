@@ -50,9 +50,9 @@ window.onload = function() {
     }
   };
   // append data to the HTML
-  let appendData = (arrLength, data, parentDiv) => {
+  let appendData = (dataLength, data, parentDiv) => {
     let ul = document.createElement("ul");
-    for (let i = 0; i < arrLength; i++) {
+    for (let i = 0; i < dataLength; i++) {
       let li = document.createElement("li");
       let title = document.createElement("h5");
       let author = document.createElement("h5");
