@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lime</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="containter">
+      <div id="request" class="request">
+        <div class="info">
+          <input id="participants" class="inputs" type="text" placeholder="Participant Name" />
+          <button id="find" class="">Find</button>
+          <div id="meetingEmployees">
+            <h4 class="addedText">
+              Employees Added to Meeting:
+            </h4>
+          </div>
+        </div>
+        <div class="info">
+          <select id="meetingLength" class="inputs">
+            <option value="" disabled selected>Meeting duration</option>
+            <option value="5">5 Minutes</option>
+            <option value="10">10 Minutes</option>
+            <option value="15">15 Minutes</option>
+            <option value="20">20 Minutes</option>
+            <option value="25">25 Minutes</option>
+            <option value="30">30 Minutes</option>
+            <option value="35">35 Minutes</option>
+            <option value="40">40 Minutes</option>
+            <option value="45">45 Minutes</option>
+            <option value="50">50 Minutes</option>
+            <option value="55">55 Minutes</option>
+            <option value="60">60 Minutes</option>
+          </select>
+        </div>
+        <div class="info">
+          <select id="officeHoursStart" class="timeSelect">
+            <option value="" disabled selected>Office Hours Start</option>
+          </select>
+        </div>
+        <div class="info">
+          <select id="officeHoursEnd" class="timeSelect">
+            <option value="" disabled selected>Office Hours End</option>
+          </select>
+        </div>
+        <div class="info">
+          <input
+            id="earliestDate"
+            class="inputs date"
+            type="date"
+            name="ed"
+            placeholder="Earliest Date"
+            required
+            aria-required="true"
+          />
+        </div>
+        <div class="info">
+          <input
+            id="latestDate"
+            class="inputs date"
+            type="date"
+            name="ld"
+            placeholder="Latest Date"
+            required
+            aria-required="true"
+          />
+        </div>
+        <div class="info">
+          <button id="search" class="inputs">Search</button>
+        </div>
+      </div>
+
+      <img id="spinner" src="https://loading.io/spinners/spin/lg.ajax-spinner-gif.gif" />
+      <div id="empRequest" class="result"></div>
+
+      <div id="suggestionResult" class="result"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

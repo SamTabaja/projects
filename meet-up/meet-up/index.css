@@ -1,0 +1,293 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Times New Roman", Times, serif;
+}
+.containter {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("meeting.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.request {
+  margin: 1em;
+}
+
+#suggestionResult {
+  width: 75%;
+}
+
+.result {
+  display: none;
+  font-size: 16px;
+  text-align: left;
+  margin: 1em 2em;
+}
+.info {
+  padding: 0 0.25em;
+  margin: 1em;
+  text-align: left;
+}
+#participants {
+  display: inline;
+  width: 220px;
+  padding-left: 10px;
+}
+
+#find {
+  background: #dc143c;
+  color: white;
+  width: 80px;
+  height: 33px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 550;
+  border: 2px solid #dc143c;
+  cursor: pointer;
+}
+
+.inputs {
+  display: block;
+  width: 310px;
+  height: 30px;
+  padding: 0px 0.5em;
+  font-size: 16px;
+}
+
+#meetingLength {
+  width: 330px;
+  height: 35px;
+}
+
+.timeSelect {
+  width: 330px;
+  height: 35px;
+  padding: 0px 0.5em;
+  font-size: 16px;
+}
+
+#meetingEmployees {
+  display: none;
+}
+
+.selectedEmployee {
+  background: white;
+  color: #dc143c;
+  margin: 8px 8px 0 0;
+  border-radius: 10px;
+}
+
+.selectedEmployee:hover {
+  background: #dc143c;
+  color: white;
+  transition: all 0.5s ease-out;
+}
+
+.matchedEmployee {
+  background: white;
+  color: black;
+  margin: 10px 8px 0 10px;
+  border-radius: 10px;
+}
+
+.matchedEmployee:hover {
+  background: black;
+  color: white;
+  transition: all 0.5s ease-out;
+}
+
+.employee {
+  padding: 0.5em 0.25em;
+  display: inline-block;
+  font-size: 16px;
+  width: 160px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.addedText {
+  padding: 0.5em;
+  margin: 0.5em 10px;
+  color: white;
+  border-bottom: 2px solid #dc143c;
+}
+
+#search {
+  width: 330px;
+  height: 35px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background: #dc143c;
+  border: 2px solid #dc143c;
+}
+
+.dateLi {
+  padding: 1em;
+  background: white;
+  color: #dc143c;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: left;
+  margin: 10px 8px 0px 10px;
+  display: inline-block;
+}
+
+.timeLi {
+  color: black;
+  list-style: none;
+  padding: 0.25em;
+}
+
+input[type="date"]::before {
+  content: attr(placeholder);
+  width: 100%;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  display: none;
+}
+
+.errorMsg {
+  background: white;
+  color: #dc143c;
+  text-align: left;
+  padding: 1em;
+  margin: 2em 0 0 2.5em;
+  font-size: 14px;
+  width: 310px;
+}
+
+.errors {
+  padding: 0.5em;
+}
+
+#spinner {
+  display: none;
+  width: 150px;
+  height: 150px;
+  margin: 2em auto;
+}
+
+.add {
+  color: #dc143c;
+  margin: 0 0.3em 0 0.4em;
+}
+
+.minus {
+  color: black;
+  margin: 0 0.3em 0 0.4em;
+}
+
+@media screen and (max-width: 768px) {
+  .containter {
+    grid-template-areas:
+      "search"
+      "emp"
+      "result ";
+    overflow: scroll;
+  }
+
+  #request {
+    grid-area: search;
+  }
+
+  #empRequest {
+    grid-area: emp;
+    width: 350px;
+    margin: 0px auto;
+  }
+
+  #suggestionResult {
+    margin: 1em;
+    grid-area: result;
+  }
+
+  .result {
+    font-size: 14px;
+    margin: 0.75em 1em;
+  }
+  .info {
+    margin: 0.75em;
+  }
+  .inputs {
+    font-size: 15px;
+  }
+
+  .selectedEmployee {
+    border-radius: 10px;
+  }
+
+  .employee {
+    font-size: 14px;
+    width: 140px;
+  }
+
+  .addedText {
+    width: 300px;
+  }
+
+  #spinner {
+    margin: 2em 5em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .containter {
+    grid-template-areas:
+      "search emp"
+      "result result";
+  }
+
+  #request {
+    grid-area: search;
+  }
+
+  #empRequest {
+    grid-area: emp;
+    width: 340px;
+    margin: 2em 5em;
+  }
+
+  #suggestionResult {
+    grid-area: result;
+  }
+
+  .result {
+    font-size: 14px;
+    margin: 0.75em 1em;
+  }
+  .info {
+    margin: 0.75em;
+  }
+  .inputs {
+    font-size: 15px;
+  }
+
+  .selectedEmployee {
+    border-radius: 10px;
+  }
+
+  .employee {
+    font-size: 14px;
+    width: 140px;
+  }
+
+  .addedText {
+    width: 300px;
+  }
+
+  #spinner {
+    margin: 2em 5em;
+  }
+}
